@@ -52,7 +52,40 @@
           </GetStarted>
           <FunctionFile resid="Taskpane.Url"/>
           <ExtensionPoint xsi:type="PrimaryCommandSurface">
-            <CustomTab id="Beacon">
+           
+
+
+            <!-- <CustomTab id="Beacon4">
+              <Group id="CommandsGroup4">
+                <Label resid="CommandsGroup4.Label"/>
+                <Icon>
+                  <bt:Image size="16" resid="Icon.16x16"/>
+                  <bt:Image size="32" resid="Icon.32x32"/>
+                  <bt:Image size="80" resid="Icon.80x80"/>
+                </Icon>
+
+                <Control xsi:type="Button" id="TaskpaneButton4">
+                  <Label resid="TaskpaneButton4.Label"/>
+                  <Supertip>
+                    <Title resid="TaskpaneButton4.Label"/>
+                    <Description resid="TaskpaneButton4.Tooltip"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Icon.16x16"/>
+                    <bt:Image size="32" resid="Icon.32x32"/>
+                    <bt:Image size="80" resid="Icon.80x80"/>
+                  </Icon>
+                     <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>ButtonId1</TaskpaneId>
+                    <SourceLocation resid="Taskpane.Url"/>
+                  </Action>
+                </Control>
+
+              </Group>
+              <Label resid="Beacon4.Tab.TabLabel"/>
+            </CustomTab> -->
+
+             <CustomTab id="Beacon">
               <Group id="CommandsGroup">
                 <Label resid="CommandsGroup.Label"/>
                 <Icon>
@@ -66,7 +99,7 @@
                     <Title resid="TaskpaneButton.Label"/>
                     <Description resid="TaskpaneButton.Tooltip"/>
                   </Supertip>
-                  <Icon>
+                    <Icon>
                     <bt:Image size="16" resid="Icon.16x16"/>
                     <bt:Image size="32" resid="Icon.32x32"/>
                     <bt:Image size="80" resid="Icon.80x80"/>
@@ -84,7 +117,7 @@
                     <Title resid="TaskpaneButton2.Label"/>
                     <Description resid="TaskpaneButton2.Tooltip"/>
                   </Supertip>
-                  <Icon>
+                    <Icon>
                     <bt:Image size="16" resid="Icon.16x16"/>
                     <bt:Image size="32" resid="Icon.32x32"/>
                     <bt:Image size="80" resid="Icon.80x80"/>
@@ -94,9 +127,7 @@
                     <SourceLocation resid="Taskpane.Url"/>
                   </Action>
                 </Control>
-
-
-              </Group>
+                </Group>
 
               <Group id="CommandsGroup2">
                 <Label resid="CommandsGroup2.Label"/>
@@ -106,36 +137,67 @@
                   <bt:Image size="80" resid="Icon.80x80"/>
                 </Icon>
 
-                <Control xsi:type="Button" id="TaskpaneButton3">
-                  <Label resid="TaskpaneButton3.Label"/>
-                  <Supertip>
-                    <Title resid="TaskpaneButton3.Label"/>
-                    <Description resid="TaskpaneButton3.Tooltip"/>
-                  </Supertip>
-                  <Icon>
+                                  <Control xsi:type="Menu" id="Contoso.Menu">
+                                  <Label resid="Contoso.Menu.Label"/>
+                                  <Supertip>
+                                  <Title resid="Contoso.Menu.Label"/>
+                                  <Description resid="Contoso.Menu.Tooltip"/>
+                                  </Supertip>
+                                   <Icon>
                     <bt:Image size="16" resid="Icon.16x16"/>
                     <bt:Image size="32" resid="Icon.32x32"/>
                     <bt:Image size="80" resid="Icon.80x80"/>
                   </Icon>
-                     <Action xsi:type="ShowTaskpane">
+                                  <Items>
+                                  <Item id="itemShowTaskPane">
+                                  <Label resid="Contoso.Item1.Label"/>
+                                  <Supertip>
+                                  <Title resid="Contoso.Item1.Label"/>
+                                  <Description resid="Contoso.Item1.Tooltip"/>
+                                  </Supertip>
+                                   <Icon>
+                    <bt:Image size="16" resid="Icon.16x16"/>
+                    <bt:Image size="32" resid="Icon.32x32"/>
+                    <bt:Image size="80" resid="Icon.80x80"/>
+                  </Icon>
+                       
+                        <Action xsi:type="ShowTaskpane">
                     <TaskpaneId>ButtonId1</TaskpaneId>
                     <SourceLocation resid="Taskpane.Url"/>
                   </Action>
-                </Control>
+                                  </Item>
+
+                                  <Item id="itemExecuteFunction">
+                                  <Label resid="Contoso.Item2.Label"/>
+                                  <Supertip>
+                                  <Title resid="Contoso.Item2.Label"/>
+                                  <Description resid="Contoso.Item2.Tooltip"/>
+                                  </Supertip>
+                                  <Icon>
+                    <bt:Image size="16" resid="Icon.16x16"/>
+                    <bt:Image size="32" resid="Icon.32x32"/>
+                    <bt:Image size="80" resid="Icon.80x80"/>
+                  </Icon>
+                                  <!-- <Action xsi:type="ExecuteFunction">
+                                  <FunctionName>writeValue</FunctionName>
+                                  </Action> -->
+
+                           <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>ButtonId1</TaskpaneId>
+                    <SourceLocation resid="Taskpane.Url"/>
+                  </Action>
+
+                                  </Item>
+                                  </Items>
+                                  </Control>
+
 
               </Group>
+
               <Label resid="Beacon.Tab.TabLabel"/>
-            </CustomTab>
+            </CustomTab>  
 
-
-
- 
-
-
-            
           </ExtensionPoint>
-
-
         </DesktopFormFactor>
       </Host>
     </Hosts>
@@ -156,17 +218,30 @@
         <bt:String id="GetStarted.Title" DefaultValue="Get started with your sample add-in!"/>
         <bt:String id="CommandsGroup.Label" DefaultValue="Commands Group"/>
         <bt:String id="CommandsGroup2.Label" DefaultValue="Commands Group2"/>
+        <bt:String id="CommandsGroup4.Label" DefaultValue="Commands Group4"/>
         <bt:String id="TaskpaneButton.Label" DefaultValue="Show Taskpane"/>
         <bt:String id="TaskpaneButton2.Label" DefaultValue="Show Taskpane2"/>
         <bt:String id="TaskpaneButton3.Label" DefaultValue="Show Taskpane3"/>
+        <bt:String id="TaskpaneButton4.Label" DefaultValue="Show Taskpane3"/>
         <bt:String id="Beacon.Tab.TabLabel" DefaultValue="Beacon"/>
-        <!-- <bt:String id="Beacon2.Tab.TabLabel" DefaultValue="Beacon2"/> -->
+        <bt:String id="Beacon4.Tab.TabLabel" DefaultValue="Beacon2"/>
+         <bt:String id="Contoso.Menu.Label" DefaultValue="Menu Label"/>
+       
+         <bt:String id="Contoso.Item1.Label" DefaultValue="item 1"/>
+     
+         <bt:String id="Contoso.Item2.Label" DefaultValue="item label 2"/>
+      
+    
       </bt:ShortStrings>
       <bt:LongStrings>
         <bt:String id="GetStarted.Description" DefaultValue="Your sample add-in loaded succesfully. Go to the HOME tab and click the 'Show Taskpane' button to get started."/>
         <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Click to Show a Taskpane"/>
         <bt:String id="TaskpaneButton2.Tooltip" DefaultValue="Click to Show a Taskpane2"/>
         <bt:String id="TaskpaneButton3.Tooltip" DefaultValue="Click to Show a Taskpane3"/>
+        <bt:String id="TaskpaneButton4.Tooltip" DefaultValue="Click to Show a Taskpane3"/>
+           <bt:String id="Contoso.Item2.Tooltip" DefaultValue="dgdgd"/>
+               <bt:String id="Contoso.Item1.Tooltip" DefaultValue="item 1 tooltip"/>
+                 <bt:String id="Contoso.Menu.Tooltip" DefaultValue=" menu tooltip"/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>
