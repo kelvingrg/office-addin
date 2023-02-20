@@ -178,14 +178,31 @@
                     <bt:Image size="32" resid="Icon.32x32"/>
                     <bt:Image size="80" resid="Icon.80x80"/>
                   </Icon>
-                                  <!-- <Action xsi:type="ExecuteFunction">
+                                  <Action xsi:type="ExecuteFunction">
                                   <FunctionName>writeValue</FunctionName>
-                                  </Action> -->
+                                  </Action>
 
-                           <Action xsi:type="ShowTaskpane">
+                           <!-- <Action xsi:type="ShowTaskpane">
                     <TaskpaneId>ButtonId1</TaskpaneId>
                     <SourceLocation resid="Taskpane.Url"/>
-                  </Action>
+                  </Action> -->
+
+                                  </Item>
+                                       <Item id="ReadTableData">
+                                  <Label resid="ReadTableData.Label"/>
+                                  <Supertip>
+                                  <Title resid="ReadTableData.Label"/>
+                                  <Description resid="ReadTableData.Tooltip"/>
+                                  </Supertip>
+                                   <Icon>
+                    <bt:Image size="16" resid="Icon.16x16"/>
+                    <bt:Image size="32" resid="Icon.32x32"/>
+                    <bt:Image size="80" resid="Icon.80x80"/>
+                  </Icon>
+                       
+                             <Action xsi:type="ExecuteFunction">
+                                  <FunctionName>readValue</FunctionName>
+                                  </Action>
 
                                   </Item>
                                   </Items>
@@ -216,20 +233,19 @@
       <bt:ShortStrings>
         <bt:String id="Functions.Namespace" DefaultValue="CONTOSO"/>
         <bt:String id="GetStarted.Title" DefaultValue="Get started with your sample add-in!"/>
-        <bt:String id="CommandsGroup.Label" DefaultValue="Commands Group"/>
-        <bt:String id="CommandsGroup2.Label" DefaultValue="Commands Group2"/>
+        <bt:String id="CommandsGroup.Label" DefaultValue="Commands 1"/>
+        <bt:String id="CommandsGroup2.Label" DefaultValue="Commands 2"/>
         <bt:String id="CommandsGroup4.Label" DefaultValue="Commands Group4"/>
-        <bt:String id="TaskpaneButton.Label" DefaultValue="Show Taskpane"/>
-        <bt:String id="TaskpaneButton2.Label" DefaultValue="Show Taskpane2"/>
-        <bt:String id="TaskpaneButton3.Label" DefaultValue="Show Taskpane3"/>
+        <bt:String id="TaskpaneButton.Label" DefaultValue="Option 1"/>
+        <bt:String id="TaskpaneButton2.Label" DefaultValue="Option 2"/>
+        <bt:String id="TaskpaneButton3.Label" DefaultValue="Option 3"/>
         <bt:String id="TaskpaneButton4.Label" DefaultValue="Show Taskpane3"/>
         <bt:String id="Beacon.Tab.TabLabel" DefaultValue="Beacon"/>
         <bt:String id="Beacon4.Tab.TabLabel" DefaultValue="Beacon2"/>
          <bt:String id="Contoso.Menu.Label" DefaultValue="Menu Label"/>
-       
          <bt:String id="Contoso.Item1.Label" DefaultValue="item 1"/>
-     
-         <bt:String id="Contoso.Item2.Label" DefaultValue="item label 2"/>
+         <bt:String id="Contoso.Item2.Label" DefaultValue="write data "/>
+         <bt:String id="ReadTableData.Label" DefaultValue="read Table Data data "/>
       
     
       </bt:ShortStrings>
@@ -241,6 +257,7 @@
         <bt:String id="TaskpaneButton4.Tooltip" DefaultValue="Click to Show a Taskpane3"/>
            <bt:String id="Contoso.Item2.Tooltip" DefaultValue="dgdgd"/>
                <bt:String id="Contoso.Item1.Tooltip" DefaultValue="item 1 tooltip"/>
+               <bt:String id="ReadTableData.Tooltip" DefaultValue="Read Table Data"/>
                  <bt:String id="Contoso.Menu.Tooltip" DefaultValue=" menu tooltip"/>
       </bt:LongStrings>
     </Resources>
